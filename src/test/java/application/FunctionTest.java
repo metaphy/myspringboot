@@ -23,9 +23,9 @@ public class FunctionTest {
 		 * In this section, we will configure our SauceLabs credentials in order to run
 		 * our tests on saucelabs.com
 		 */
-		String sauceUserName = "Baymax408";
-		String sauceAccessKey = "7811c3a6-d958-43bd-8ddc-a0274767b0c3";
-
+		String sauceUserName = "metaphy";
+		String sauceAccessKey = "0c52787e-9852-48ab-b205-4d0f26e67e76";
+		String myapp = "http://168.1.141.100:30880";
 		/**
 		 * In this section, we will configure our test to run on some specific
 		 * browser/os combination in Sauce Labs
@@ -51,12 +51,12 @@ public class FunctionTest {
 		capabilities.setCapability("name", "testImageRecognize()");
 
 		// set prerun to download test image file in Sauce Labs
-		capabilities.setCapability("prerun", "http://169.51.194.16:31936/curl.sh");
+		capabilities.setCapability("prerun", myapp + "/curl.sh");
 
 		driver = new RemoteWebDriver(new URL("http://ondemand.saucelabs.com:80/wd/hub"), capabilities);
 
 		// navigate to the url of the Example restful api
-		driver.navigate().to("http://169.51.194.16:31936/swagger-ui.html");
+		driver.navigate().to(myapp+"/swagger-ui.html");
 
 		// Create an instance of a Selenium explicit wait so that we can dynamically
 		// wait for an element
