@@ -25,7 +25,7 @@ import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifyOption
 @RequestMapping(path = "v1/image")
 public class Example {
 	private final static String version = "2018-03-19";
-	private final static String apiKey = "xxx";
+	private final static String apiKey = "HlXo4g8Ba3-Xd2JJDzZI4xAPBzr6_m9Np9ItWQ8GqNxw";
 	private final static String endPoint = "https://gateway.watsonplatform.net/visual-recognition/api";
 
 	@PostMapping(path = "/recognize")
